@@ -12,7 +12,7 @@ The code is split into four different tasks (see comments in Driver.py).
 The output diagram "Network structure - before lakes" displays a flow network structure before removing pitflags (the networks are not connected).
 
 
-*******FIGURE
+![task1](img/task1.png)
 
 The background in this figure represents the elevation, with yellow colours representing higher raster cells and blue colours indicating low raster cells. The lines represent the flow direction. The flow direction is calculated with the standard algorithm D8, introduced by O’Callaghan & Mark (1984), which looks at the 8 neighbour cells and sets the flow direction to the lowest neighbour (see also setDownnode() method of FlowRaster class in Flow.py). Furthermore, when no neighbouring cell is lower than the cell itself it is marked with a red point in Figure 1, representing a “pitflag”. Pitflags are raster cells that don’t have a downnode, i.e. the water can’t flow in any other cell from this cell.
 
@@ -22,7 +22,7 @@ The background in this figure represents the elevation, with yellow colours repr
 
 Task 2 calculates flow rates (assuming constant rainfall) using the network structure from task 1. The flow rates are calculated in the recursive function *getFlow()*. Note that water seems to disappear in a lake / pitflag because the networks are not joined yet.
 
-*******FIGURE
+![task1](img/task2.png)
 
 This figure shows the river flow rates with constant rain (1mm per cell). Yellow values indicate a high flow rate while blue values indicate a low flow rate.
 
@@ -39,11 +39,20 @@ This was carried out in three steps. First, lakes are identified by an algorithm
 
 To test the implemented algorithm the incoming rainfall and the summed flow at pitflags on an edge were compared. The two values had to be the same.
 
+![algorithm](img/algorithm.jpg)
+Algorithm for calculating flow with gravitation towards the lake outflow.
+
+![task4](img/task40.png)
+
+![task4](img/task41.png)
+
+![task4](img/task42.png)
+
 
 ## TASK 5
 
 For task 5 real raster data (rainfall and DEM) is imported and converted to the same resolution.
 
-
+![task5](img/task5.png)
 
 
