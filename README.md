@@ -1,6 +1,6 @@
 # Hydrological Flow Model
 
-Implementation of the D8 algorithm and lake identification and flow algorithms with python and matplotlib.
+Implementation of the D8 algorithm, a lake identification and flow algorithm with python and matplotlib.
 
 This code implements a flow algorithm using a DEM and rainfall data. It further identifies and fills pitflags / lakes and develops a drainage algorithm using a gravitation model towards the lake outflow. For more information and pseudo-code of the drainage algorithm see: [www.geo-blog.com/lake-flow-algorithm](http://www.geo-blog.com/lake-flow-algorithm/)
 
